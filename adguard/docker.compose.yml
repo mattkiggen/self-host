@@ -1,0 +1,12 @@
+services:
+  adguard:
+    image: adguard/adguardhome
+    network_mode: host
+    volumes:
+      - work:/opt/adguardhome/work
+      - conf:/opt/adguardhome/conf
+    restart: unless-stopped
+
+volumes:
+  work:
+  conf:
